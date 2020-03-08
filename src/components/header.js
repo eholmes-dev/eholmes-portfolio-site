@@ -1,35 +1,80 @@
-import { Link } from "gatsby"
+import { SocialIcon } from 'react-social-icons';
 import PropTypes from "prop-types"
-import React from "react"
+//import React from "react"
+import React, { useState } from 'react';
+import {
+  Collapse,
+  Navbar,
+  NavbarToggler,
+  NavbarBrand,
+  Nav,
+  NavItem,
+  NavLink,
+  UncontrolledDropdown,
+  DropdownToggle,
+  DropdownMenu,
+  DropdownItem,
+  NavbarText
+} from 'reactstrap';
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
+const Header = ({ siteTitle }) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggle = () => setIsOpen(!isOpen);
+
+  return (
+    <div>
+      <Navbar fixed="top" light expand="sm" light>
+      <div className="container">
+      <NavbarBrand href="/">{siteTitle}</NavbarBrand>
+      <NavbarToggler onClick={toggle} />
+      <Collapse isOpen={isOpen} navbar>
+        <Nav className="mr-auto" navbar>
+          <NavItem>
+            <NavLink href="/">Home</NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink href="/about">About</NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink href="/blog">Blog</NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink href="/skills">Skills</NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink href="/Projects">Projects</NavLink>
+          </NavItem>
+          
+          
+        </Nav>
+        <div className="social-share-links">
+        <ul className="social-links-list">
+            
+             <li>
+             <SocialIcon target="_blank" url="https://www.linkedin.com/in/echolmes/" />
+             </li>
+            
+            <li>
+            <SocialIcon target="_blank" url="https://github.com/eholmes-dev" bgColor="#000000"/>  
+            </li>
+            
+            <li>
+            <SocialIcon target="_blank" url="https://www.facebook.com/eholmes.dev" /> 
+            </li>
+            
+            <li>
+            <SocialIcon target="_blank" url="https://www.instagram.com/ethanholmes7/"/>
+            </li>
+        </ul>
+        </div>
+      </Collapse>
+      </div>
+        
+      </Navbar>
     </div>
-  </header>
-)
+    );
+  }
 
 Header.propTypes = {
   siteTitle: PropTypes.string,

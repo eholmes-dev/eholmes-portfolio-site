@@ -1,20 +1,21 @@
 import React from "react"
 import { Link } from "gatsby"
 
-//import style from "../styles/global.css"
+import style from "../styles/global.css"
 import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
 
-const IndexPage = () => (
+const ProjectsPage = () => (
   <Layout>
-    <SEO title="Home" />
-    <h1>Landing Page</h1>
-    <p>Landing Page Under Construction...</p>
+    <SEO title="Projects" />
+    <h1>Hello Friends 8)</h1>
+    <p>This is the beginning of my portfolio website.</p>
     <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
       <Image />
     </div>
+    <Link to="/page-2/">Go to page 2</Link>
   </Layout>
 )
 
-export default IndexPage
+export default ProjectsPage
