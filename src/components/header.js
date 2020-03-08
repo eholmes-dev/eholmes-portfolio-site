@@ -31,19 +31,19 @@ const Header = ({ siteTitle }) => {
       <Collapse isOpen={isOpen} navbar>
         <Nav className="mr-auto" navbar>
           <NavItem>
-            <NavLink href="https://eholmes-dev.github.io/eholmes-portfolio-site/">Home</NavLink>
+            <NavLink href="/">Home</NavLink>
           </NavItem>
           <NavItem>
-            <NavLink href="https://eholmes-dev.github.io/eholmes-portfolio-site/about/">About</NavLink>
+            <NavLink href="/about">About</NavLink>
           </NavItem>
           <NavItem>
-            <NavLink href="https://eholmes-dev.github.io/eholmes-portfolio-site/blog/">Blog</NavLink>
+            <NavLink href="/blog">Blog</NavLink>
           </NavItem>
           <NavItem>
-            <NavLink href="https://eholmes-dev.github.io/eholmes-portfolio-site/skills/">Skills</NavLink>
+            <NavLink href="/skills">Skills</NavLink>
           </NavItem>
           <NavItem>
-            <NavLink href="https://eholmes-dev.github.io/eholmes-portfolio-site/Projects/">Projects</NavLink>
+            <NavLink href="/Projects">Projects</NavLink>
           </NavItem>
           
           
