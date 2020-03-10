@@ -9,12 +9,12 @@ import SEO from "../components/seo"
 const AboutPage = () => (
   <Layout>
     <SEO title="About" />
-    <h1>About page</h1>
-    <p>This is the about page.</p>
+    <h1>Under Construction</h1>
+    <p>Coming Soon...</p>
+    
     <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
       <Image />
     </div>
-    <Link to="/page-2/">Go to page 2</Link>
   </Layout>
 )
 
