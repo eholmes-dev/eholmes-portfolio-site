@@ -9,6 +9,8 @@ import Image from "../components/image"
 import SEO from "../components/seo"
 //react-spring/renderprops-addons.cjs
 import { Parallax, ParallaxLayer } from 'react-spring/renderprops-addons.cjs'
+import '../styles/para.scss'
+
 
 // Little helpers ...
 const url = (name, wrap = false) => `${wrap ? 'url(' : ''}https://awv3node-homepage.surge.sh/build/assets/${name}.svg${wrap ? ')' : ''}`
@@ -19,10 +21,13 @@ const Green = ({ children }) => <span style={{ color: '#57EE89' }}>{children}</s
 const Blue = ({ children }) => <span style={{ color: '#57C7FF' }}>{children}</span>
 const Gray = ({ children }) => <span style={{ color: '#909090' }}>{children}</span>
 
+
+
 class App extends React.Component {
   render() {
     return (
-      <Parallax ref={ref => (this.parallax = ref)} pages={3}>
+      
+      <Parallax ref={ref => (this.parallax = ref)} pages={3} className="para">
        
         <ParallaxLayer offset={1} speed={1} style={{ backgroundColor: '#805E73' }} />
         <ParallaxLayer offset={2} speed={1} style={{ backgroundColor: '#87BCDE' }} />
@@ -78,12 +83,22 @@ class App extends React.Component {
           }}
         />
         
+        
         <ParallaxLayer
           offset={0}
           speed={0.1}         
           //onClick={() => this.parallax.scrollTo(1)}
+          style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }} className="sticky">
+          <Header siteTitle="eholmes.dev"/>
+          
+        </ParallaxLayer>
+
+        <ParallaxLayer
+          offset={0.075}
+          speed={0.1}         
+          //onClick={() => this.parallax.scrollTo(1)}
           style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-          <Header />
+          
           <img src={url('server')} style={{ width: '20%' }} />
         </ParallaxLayer>
 
@@ -103,6 +118,7 @@ class App extends React.Component {
           <img src={url('clients-main')} style={{ width: '40%' }} />
         </ParallaxLayer>
       </Parallax>
+      
     )
   }
 }
