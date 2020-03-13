@@ -22,6 +22,7 @@
     "gatsby-transformer-remark": "^2.6.55",
     "gatsby-transformer-sharp": "^2.3.13",
     "gh-pages": "^2.2.0",
+    "hide-scrollbar-react": "^1.1.6",
     "mdbreact": "^4.25.3",
     "node-sass": "^4.13.1",
     "prop-types": "^15.7.2",
