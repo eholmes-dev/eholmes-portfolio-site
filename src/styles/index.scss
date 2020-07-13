@@ -20,6 +20,42 @@ html {
     width: 0;
 }
 
+.about-section {
+    
+    float: right;
+  width: 70%;
+  height: 75%px;
+  padding: 20px;
+  //border: 1px solid rgb(254, 255, 255);
+  text-align: left;
+  word-wrap: break-word;
+  }
+
+  .about-section2 {
+    display: inline-block;
+    width: 100%;
+  padding: 20px;
+  border: 1px solid rgb(254, 255, 255);
+  text-align: center;
+  }
+
+  .column {
+    float: left;
+    width: 50%;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  li {
+    padding: 10px;
+  }
+
+  
 @import './variables';
 @import './base';
 @import './footer';
