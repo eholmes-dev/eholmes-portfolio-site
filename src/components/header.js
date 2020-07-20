@@ -21,7 +21,13 @@ const Header = ({ siteTitle }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => setIsOpen(!isOpen);
-
+/**
+ * return this section to the nav if I decide
+ * to add a blog.
+ * <NavItem>
+      <NavLink href="/blog">Blog</NavLink>
+   </NavItem> 
+ */
   return (
     <div>
       <Navbar fixed="top" light expand="sm" light>
@@ -35,10 +41,7 @@ const Header = ({ siteTitle }) => {
           </NavItem>
           <NavItem>
             <NavLink href="/about">About</NavLink>
-          </NavItem>
-          <NavItem>
-            <NavLink href="/blog">Blog</NavLink>
-          </NavItem>
+          </NavItem>         
           <NavItem>
             <NavLink href="/skills">Skills</NavLink>
           </NavItem>
